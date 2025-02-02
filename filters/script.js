@@ -1,0 +1,1 @@
+document.getElementsByTagName("video").playbackRate = 2.5; // Half speed

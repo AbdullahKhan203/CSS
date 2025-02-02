@@ -1,0 +1,92 @@
+img {
+      /*general form:--- /* filter: effect(value); */
+    /* filter: grayscale(100%); Apply grayscale effect */
+    /* filter: brightness(120%) contrast(150%) blur(3px); */
+
+        /* transition: 0.5s ease-in-out; Smooth transition effect */
+            /* filter: grayscale(0%) brightness(120%) contrast(120%); */
+            /* filter: blur(1px); */
+
+            /* filter: brightness(150%); */
+            /* filter: contrast(200%); */
+            /* filter: sepia(100%); */
+            /* filter: invert(100%); */
+            /* filter: saturate(300%); */
+            /* filter: hue-rotate(200deg); */
+
+            /* filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.5)); */
+
+            /* filter: brightness(120%) contrast(150%) blur(2px); */
+
+
+}
+
+video:hover {
+    /* filter: sepia(100%) brightness(110%); */
+    /* filter: brightness(100%) blur(0px); */
+}
+video{
+    /* Smooth effect */
+    transition: 0.5s ease-in-out;
+    /* filter: grayscale(100%) brightness(120%) contrast(150%); */
+     /* background: rgba(0, 0, 0, 0.5); */
+    /* backdrop-filter: blur(10px);  */
+     /* filter: sepia(100%); */
+     /* filter: brightness(120%) contrast(150%) grayscale(50%) sepia(30%) blur(2px) hue-rotate(180deg); */
+     /* filter: brightness(120%) blur(0.5px); */
+     /* transition: filter 1s ease-in-out; */
+     filter: brightness(300%)
+}
+
+/* List of Filters You Can Apply on Video
+Filter	Description	Example Value
+blur(px)	Applies blur effect	blur(5px)
+brightness(%)	Adjusts brightness	brightness(120%)
+contrast(%)	Adjusts contrast	contrast(150%)
+grayscale(%)	Converts to grayscale	grayscale(100%)
+invert(%)	Inverts colors	invert(100%)
+opacity(%)	Adjusts transparency	opacity(50%)
+saturate(%)	Increases/decreases color saturation	saturate(200%)
+sepia(%)	Adds a sepia tone	sepia(100%)
+hue-rotate(deg)	Rotates colors	hue-rotate(90deg)
+drop-shadow(x y blur color)	Adds a shadow	drop-shadow(10px 10px 5px black) */
+
+
+
+
+
+
+
+
+
+
+/* values and definations:- */
+
+
+/* ### **CSS `filter` Property – Definition, Values, and Limits**  
+
+#### **Definition:**  
+The `filter` property in CSS applies visual effects to elements (especially images, backgrounds, and videos) such as blurring, brightness adjustment, contrast, and more. It is commonly used to enhance visuals without modifying the original image.  
+
+#### **Filter Functions, Values, and Limits:**  
+
+| Filter Function      | Description | Value Format | Value Range |
+|----------------------|-------------|-------------|------------|
+| **`blur(px)`**      | Applies a Gaussian blur | `px` (pixels) | `0px` (no blur) to any positive value |
+| **`brightness(%)`** | Adjusts brightness | Percentage `%` | `0%` (black) to `100%` (original), above `100%` increases brightness |
+| **`contrast(%)`**   | Adjusts contrast | Percentage `%` | `0%` (gray) to `100%` (original), above `100%` increases contrast |
+| **`grayscale(%)`**  | Converts to grayscale | Percentage `%` | `0%` (original) to `100%` (fully grayscale) |
+| **`invert(%)`**     | Inverts colors | Percentage `%` | `0%` (original) to `100%` (fully inverted) |
+| **`opacity(%)`**    | Adjusts transparency | Percentage `%` | `0%` (fully transparent) to `100%` (fully visible) |
+| **`saturate(%)`**   | Adjusts color intensity | Percentage `%` | `0%` (grayscale) to `100%` (original), above `100%` oversaturates |
+| **`sepia(%)`**      | Applies a sepia tone | Percentage `%` | `0%` (original) to `100%` (full sepia) |
+| **`hue-rotate(deg)`** | Rotates color hue | Degrees `deg` | `0deg` (original) to `360deg` (full circle) |
+| **`drop-shadow(x y blur color)`** | Adds a shadow effect | `px` and color | `(x-offset y-offset blur-radius color)` |
+
+#### **Example: Applying Filters**  
+```css
+img {
+    filter: brightness(120%) contrast(150%) blur(2px);
+}
+```
+This increases brightness by 20%, contrast by 50%, and applies a slight blur.  

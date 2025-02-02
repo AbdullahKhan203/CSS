@@ -1,0 +1,4 @@
+the filter property is used to apply graphical effects to elements, such as blurring, brightness adjustment, contrast, grayscale, and more. This property allows you to modify the appearance of an element without changing its actual content.
+
+
+

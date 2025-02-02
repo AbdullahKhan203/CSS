@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Lists</title>
+    <style>
+        ul {
+            list-style: none; /* Remove default bullets */
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 18px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "✔️ "; /* Custom checkmark icon */
+            color: green;
+            font-weight: bold;
+            font-size: 20px;
+            position: absolute;
+            left: -25px;
+        }
+
+        ol {
+            list-style-type: upper-roman; /* I, II, III, IV */
+            color: navy;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Custom Bullet List</h2>
+    <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+    </ul>
+
+    <h2>Ordered List</h2>
+    <ol>
+        <li>Step One</li>
+        <li>Step Two</li>
+        <li>Step Three</li>
+    </ol>
+
+</body>
+</html>
