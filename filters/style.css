@@ -1,7 +1,7 @@
 img {
       /*general form:--- /* filter: effect(value); */
-    /* filter: grayscale(100%); Apply grayscale effect */
-    /* filter: brightness(120%) contrast(150%) blur(3px); */
+    /* filter: grayscale(100%);  */
+    /* filter: brightness(200%) contrast(50%) blur(1px); */
 
         /* transition: 0.5s ease-in-out; Smooth transition effect */
             /* filter: grayscale(0%) brightness(120%) contrast(120%); */
@@ -12,7 +12,7 @@ img {
             /* filter: sepia(100%); */
             /* filter: invert(100%); */
             /* filter: saturate(300%); */
-            /* filter: hue-rotate(200deg); */
+            /* filter: hue-rotate(500deg); */
 
             /* filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.5)); */
 
