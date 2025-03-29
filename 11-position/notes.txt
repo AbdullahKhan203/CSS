@@ -1,0 +1,95 @@
+There are 5 type of positions in css
+1)static(by default)
+2)relative
+3)absolute
+4)fixed
+5)sticky
+6)unset
+
+2)Relative:-
+With relative noting a special happens,element stays in his genuine place,until we move it with top,left,right,bottom etc.if we want to give like 
+```
+top:5px;
+right:5px;
+bottom:5px;
+left:5px;
+``` 
+we can replace it with 
+```inset:5px;```
+note:- if we give top,right,bottom,left ,5,5,5,5 respectively,then top and left will get preference and bottom and right would be ignore.
+Actually,when we give position:relative then in developer tools>elements>styles an outer div will be appear which has transparent background color,but show his his border,in which we can watch the value of left,right,bottom,top.which we will give with position:relative.
+
+
+
+1)Static:- 
+Static is bydefault position, all elements that will not get position value by developer,has by default position:static.top,right,left,bottom will not work on it.
+
+6)Unset:-
+position:undet make default then value,means it give position:static to div and remove its previous position value.
+for example:- if you have multiple css files, in any other file you give position value,but in this file you don know what was that value,so in case you can give give unset to make it default static.unset is not a property By itself,but it give the div his original position.
+
+
+3)With absolute a div will remian his place but the dive reach out of surface,and its parent div not calculate its space in it,means div leave his space reach on surface and its parent div also leave position:absolute dive form his space,now parent div decrease his height.for example in code:-
+```
+<ul>
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+</ul>
+    ```
+    if we give position:absolute; to <li>css</li> then this div go reach on space,now height of ul div is the addtion of this two ```<li>html</li> <li>javascript</li>``` not the ``` <li>css</li>```.because ```<li>css</li>``` Climb up on javascript.since <li>html</li> <li>javascript</li> becoem combine and css clinm up on <li>javascript</li>,now it looks like  <li>cssscript</li>, and also its width is decrease and only take space upto content css,not whole line.
+    if we give top:20px to this ```<li>css</li>```,then this element keep distance from 20px from viewpost height(body tag) instead of keep distance of 20px from his place,infact it connects with viewport,
+    if we try to give 
+    ``` top: 100px;
+    bottom: 100px;
+    left: 400px;
+    right: 400px;``` 
+    with absolute position,then it cover whole condition instead of one like left or top in relative position,but in absolute position it covers whole and expant on whole screen for sake of follow all these 4
+    ``` ``` top: 100px;
+    bottom: 100px;
+    left: 400px;
+    right: 400px;```
+    note:- if we have same value like 
+    ``` top: 100px;
+    bottom: 100px;
+    left: 100px;
+    right: 100px;``` then we can give inset:100px, which work same.
+
+note:- if we give any position to absolute position paarent's div except static, then absolute div work according to it(absolute take margin according to his parent not body it we give his parent also a position). 
+If we give relative to grandparent and grandchild absolute then grandchild work according to grandparent.   
+
+
+Remember:-If we give position:absolute; to a div, then it finds any position in his immediate parents except static,it means if we give a div position:absolute, then it check that is his parent has position so that it become sub ordinate of it,if not find any position,then it check in his grand parent,if not then it check in his grand grand child parent,it all grand parent has not any position,then it become sub ordinate of viewport,means it(absolute position div) work according to viewport.But if we give any of his parent(means parent,grand parent or grand grand parent a position except default position static) a position then it become subordinate of his parent.
+
+
+
+4)fixed:- position fixed work same as position absolute, but it has a bit difference than position absolute, distance is:- like position absolute div connect with his parent that has any position,if his parent has not any position then absolute div connect with viewport, but in case of position fixed, it always connect with viewport,position fixed div does not connect his any parent even his parent has any position,it always connect with viewport.
+
+Remember:- with position absolute or fixed div takes only place  in which his inner content consist,not whole line like block level element.for example:- when we give li position absolute or fixed, then div reach on surface and left the place,which the div take place in his parent,and also decreases his width upto his inner content only except block level element.
+
+
+5) position sticky work same as position relative,means like position relative div stay in document flow,not reach in surface like fixed and absolute(reach in surface means div goes out of document flow means div go out side of parent size calculation),position sticky work when its parent has fixed height and has scrollbar.position sticky div always stay in his paarent div,not go outside of his parent.If we will not give scrollbar to his position sticky's div, then position sticky work according to viewport.
+for example:- in code
+```
+<ul >
+        <li  class="html-element">HTML</li>
+  </ul>
+    ```
+    and css is
+    ```
+    .html-element{
+position: sticky;
+ top: 10px;
+}
+ul{
+   height: 200px;
+ background-color: brown;
+ overflow: scroll;
+}
+```
+html goes from top 10px margin,but if we not give scroll of his any parent,first it find scroll in his parent,grand parent,grand grand parent,if it dost not find scrll , then it work according to viewport,in case of viewport,if our div goes outside of view port then in that case our position sticky div start working and keep distance of 10px from viewport,but when our whole parent div goes outside from viewport then position sticky div stop keep distance from viewport and pass from viewport because position sticky div always stay in viewport.
+
+
+Remember:- sticky always work when we make its parent overflow:scroll;if we make its grand parent overflow:scroll; instead of its first parent,it will not work.But if we want to make an element sticky  according to viewport, then we must keep that div in his original parent not nested parent.means if we want to make an element sticky according to view port,then we must keep that sticky element directly in his parent div not nested parent,in which we want the sticky work.It means if we want to make an element view port sticky according to particular div, then we must keep that element in directly in  particular div not in nested form.
+
+Remember: Sticky never skips a non-scrollable parent!

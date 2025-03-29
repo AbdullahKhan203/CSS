@@ -1,0 +1,27 @@
+/* .container{
+   overflow: scroll;
+   height: 400px;
+   background: red;
+} */
+
+.container-2{
+    height: 500px;
+    overflow: scroll;
+}
+
+ul{
+    height: 400px;
+    background: cyan;
+    overflow: scroll;
+}
+.para-element{
+    position: sticky;
+    top: 100px;
+    background-color: red;
+}
+
+
+.html-element{
+    position: sticky;
+    top: 100px;
+}

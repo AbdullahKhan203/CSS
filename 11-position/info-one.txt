@@ -1,0 +1,89 @@
+Article notes for position sticky?
+Ans:-### **CSS `position: sticky` – Notes**  
+
+#### **1. Why Developers Don’t Use `position: sticky` Often**  
+- Despite strong browser support, many developers don’t use `position: sticky`.  
+- Two main reasons:  
+  1. **Delayed Adoption** – By the time browser support became widespread, many had forgotten about it.  
+  2. **Lack of Understanding** – Developers often don’t fully grasp how it works.  
+
+---
+
+#### **2. Brief Review of CSS Positioning**  
+Before `position: sticky`, there were four main position types:  
+- **Static & Relative** – Elements remain in the normal document flow.  
+- **Absolute & Fixed** – Elements are removed from the flow and do not take up space.  
+- **Sticky** – A hybrid that shares behavior with all four types.  
+
+---
+
+#### **3. First Experience with `position: sticky`**  
+- Initially, it seems simple: the element sticks when it reaches a defined position (e.g., `top: 0`).  
+- However, developers notice inconsistencies—sometimes it works, other times it doesn't.  
+- This led to deeper exploration to understand its behavior.  
+
+---
+
+#### **4. Understanding Why `position: sticky` Fails**  
+- **Issue:** If a sticky element is the **only child** inside a wrapper, it won’t stick.  
+- **Reason:** A sticky item can only "stick" within its container and needs sibling elements to float over.  
+- **Solution:** Add more elements inside the container.  
+
+Example (does **not** work):  
+```html
+<div class="wrapper">
+   <div class="sticky">SOME CONTENT</div>
+</div>
+```
+Example (works):  
+```html
+<div class="wrapper">
+   <div class="sticky">SOME CONTENT</div>
+   <div class="other">OTHER CONTENT</div>
+</div>
+```
+
+---
+
+#### **5. How `position: sticky` Actually Works**  
+- **Sticky Item** – The element assigned `position: sticky`; floats when it reaches a defined position.  
+- **Sticky Container** – The parent wrapper; defines the maximum area the sticky item can move within.  
+- The **parent automatically becomes the sticky container** when an element is set to `position: sticky`.  
+- A sticky item **cannot move outside its container**.  
+
+---
+
+#### **6. How `position: sticky` Behaves Compared to Other Positions**  
+- **Relative/Static** – The element stays in the document flow, maintaining space.  
+- **Fixed** – When it sticks, it behaves like `position: fixed`, floating in the viewport.  
+- **Absolute** – At the end of its sticky area, it stops and stacks like an absolutely positioned element inside a relative container.  
+
+---
+
+#### **7. Using `position: sticky` to Stick to the Bottom**  
+- Usually, sticky positioning is used to stick elements to the **top** (`top: 0`).  
+- It can also be used to stick elements to the **bottom** (`bottom: 0`), such as a footer.  
+- **Important:** It works best when the element’s natural position is already at the bottom of its container.  
+
+Example (good use case):  
+```css
+.footer {
+    position: sticky;
+    bottom: 0;
+}
+```
+- The footer naturally starts at the bottom and remains visible while scrolling.  
+
+---
+
+### **Key Takeaways**  
+✅ `position: sticky` is powerful but often misunderstood.  
+✅ It requires a **container** and works within its boundaries.  
+✅ Sticky elements need **sibling elements** to float over.  
+✅ It **combines behaviors** of `relative`, `absolute`, and `fixed` positions.  
+✅ It can be used to **stick elements to the bottom**, but placement matters.  
+
+This guide ensures a solid understanding of how `position: sticky` works and when to use it effectively! 🚀
+
+
+for more info you can read original article:-https://elad.medium.com/css-position-sticky-how-it-really-works-54cd01dc2d46
