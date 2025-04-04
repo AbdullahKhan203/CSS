@@ -1,0 +1,30 @@
+this is called rule according to css, and css dont recommend to write empty rule in css.
+.box{
+}
+
+if we give box a css 
+```
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    border: 2px solid red;
+    transform: scale(1.5) ;
+}
+``` then its actually width and height is height: 100px; and width: 100px; but it display in run time like it has height and width of 150px;this is it transform its height and width of 1.5 times of its original height and width,but still its actul width and height is 100px.It is like we watch it with lens.
+actually the transform with is done by property like ``` transform: scale(1.5) ;``` is not push other content side,instead it climb on other content,this is becasue .box original height and  width are same,it takes still space of 100px of height and width in document.
+The space with which is Increases with ```transform: scale(1.5) ;``` is increases from conter,and equally explained every direction,but it we want that its space increase from specific direction to towards specific direction and a practicalar corner or side of div is not affected by transform property,we can do this with giving coordinates like ```transform-origin: 100% 100%;```.
+
+q:-How to implement transparency using alpha chaneel?
+Ans:-When we does color and when we hover on color on vs code then a paneel is open,in paneel's right side we watch a first slider for color change and second slider for alpha value change.
+note:- we can even give value of alpha without rgba color,we can give value only with color code i.g #aefsfsfs etc means hex value also available in alpha chaneel.value of alpha is form 0.1 to 1.When we change slider it means we does not change color we only change alpha chaneel.
+When we make transparency with opacity then all whole div's content(text,heading,img) also become transparent but in case of alpha chaneel only div become transparent,it inner convert(like text,heading,img) not become transparent.
+
+Translate:-
+The translate() function is a part of transform, and it moves an element from its current position, in form of percentage or pixels.Whenever we shif any div to side with Translate it does not affect its surrounding.
+
+Text Shadow;-
+            Text Shadow is an inherited propery,means we give this in text parent's css rule and it is inherited to div's text.
+
+Background property:-             
+

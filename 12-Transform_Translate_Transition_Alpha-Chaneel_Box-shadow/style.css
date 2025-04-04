@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    height: 600px;
+    width: 600px;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    border: 2px solid red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:  translate(-50%,-50%) ;
+    /* transform:  translateY(300px); */
+    transform-origin: 10% 25%;
+}
+.sub-box{
+    width: 10%;
+    height: 25%;
+    border: 3px solid black;
+}

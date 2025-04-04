@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transform-Origin Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Transform-Origin Visualizer</h1>
+    
+    <div class="controls">
+        <div class="control-group">
+            <label>X Origin: <input type="text" id="x-origin" value="50"></label>
+            <select id="x-unit">
+                <option value="%">%</option>
+                <option value="px">px</option>
+            </select>
+        </div>
+        
+        <div class="control-group">
+            <label>Y Origin: <input type="text" id="y-origin" value="50"></label>
+            <select id="y-unit">
+                <option value="%">%</option>
+                <option value="px">px</option>
+            </select>
+        </div>
+        
+        <div class="control-group">
+            <label>Transform: 
+                <select id="transform-type">
+                    <option value="rotate(45deg)">Rotate 45°</option>
+                    <option value="rotate(90deg)">Rotate 90°</option>
+                    <option value="scale(1.5)">Scale 1.5x</option>
+                    <option value="skew(20deg)">Skew 20°</option>
+                </select>
+            </label>
+        </div>
+        
+        <button id="reset-btn">Reset</button>
+    </div>
+    
+    <div class="visualization">
+        <div class="original-position"></div>
+        <div id="origin-point"></div>
+        <div id="element">Drag Me!</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
