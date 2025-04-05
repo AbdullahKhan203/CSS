@@ -1,0 +1,25 @@
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 200px;
+    width: 300px;
+  
+    padding: 20px;
+    color: red;
+    text-shadow: 4px 2px 4px rgb(239, 111, 239);
+    box-shadow: 2px 2px 4px rgb(92, 74, 74);
+    border-radius: 20px;
+    background: rgb(207, 15, 15) url('https://www.shutterstock.com/shutterstock/photos/2198245029/display_1500/stock-photo-autumn-nature-landscape-lake-bridge-in-fall-forest-path-way-in-gold-woods-romantic-view-image-2198245029.jpg') center ;
+    background-size: cover;
+    transform-origin: 50% 50%;
+    transition: transform 5s cubic-bezier(0.05, 0.7, 0.3, 0.95);
+}
+
+.container:hover{
+  transform: translate(-50%,-50%) rotate(360deg);
+  
+}
+

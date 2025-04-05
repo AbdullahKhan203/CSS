@@ -122,3 +122,7 @@ Original Color [Blue]
 
 I can give you ready-made HTML+CSS code snippets or an animated live playground. Just say the word! 😊
 
+
+Q:-How do we give speed cubic-bezier(...)?
+Ans:-
+
