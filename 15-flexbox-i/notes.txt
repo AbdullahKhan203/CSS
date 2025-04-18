@@ -17,3 +17,126 @@ note:- some tags have by default margin and paddings,but if we want full contro 
     box-sizing:border-box;
 }
 
+
+When we give flex of container,and container has three flex-items,then if we are not give all flex items fixed height and width,flex-items take place accodig to content-size(means take place according to flex item's content take place),means if we flex-container has three divs then all divs take place acording to their content.
+BUt if we give height and width to items,then all items take place accodig to our given height and width if flex-container has enough place but if flex-container has not wnough sapce,then flex-items decreases its width eqaully for ecample we give width to thre flex items 200,400,400px then and flex-contaienr has not qnough width to full fill our given height then all flex-items decreases according to thier full width,means if first div that has original width 200px and now decreases upto 100px,now other divs also decarese thier height exactly 50% and know become 200px,200px.
+
+note:-we can stop divs form shringking,for example:- if we give first div flex sirnk:0;then that div width does not decarse and beocme stable and other div start shringking when flex-container div's width  decarese.
+Flex-grow is used to give exmapty available space to all flex-items in different reaions,like if parent has total width is 1200px and three divs take space 200+400+400px=1000px and 200px space space is free,and we want that second div take space of 50px,and first and third div take space 75,75px, so give flex-grow:0.375 for first div,flex-grow:0.25 for second div and flex-grow:0.375 for third div. 
+
+
+<above content in easy words starat>
+Sure! Here's your content rewritten in a clearer and more beginner-friendly way:
+
+---
+
+### Understanding CSS `width: max-content` and `min-content`
+
+- `width: max-content;`  
+  This makes the container **as wide as the longest line of content**. All content stays in **one line**, and the width grows to fit it.
+  
+- `width: min-content;`  
+  This keeps each **word on a new line**, so the container becomes as **narrow as the longest word**.
+
+**Example for `min-content`:**
+```
+i  
+am  
+Pakistani.
+```
+Here, the container width is just enough to fit the longest word: **"Pakistani"**.
+
+---
+
+### Flexbox Basics
+
+- When you make a container a **flex container**, its children become **flex items**.
+- These items appear **in one line** (horizontally by default), but they **don’t behave like block elements** (they don’t fill the full line unless specified).
+  
+#### Inline vs Flex
+- Normally, we **can’t set width or height** on inline elements.
+- But when an inline element becomes a **flex item**, we **can apply height and width** to it, just like a block element.
+
+---
+
+### Resetting Default Styles
+
+To remove default margins and paddings from elements and get full control, use this CSS:
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+```
+
+---
+
+### How Flex Items Use Space
+
+- If a flex container has multiple items **without fixed widths**, the items will size themselves based on their content.
+
+Example:
+```html
+<div class="flex-container">
+  <div>Item 1</div>
+  <div>Longer Item 2</div>
+  <div>Item 3</div>
+</div>
+```
+Each item will take up space according to its content.
+
+#### Giving Widths
+
+- If you **assign widths** (like 200px, 400px, 400px), they will take up that much space **if available**.
+- If the container **doesn’t have enough space**, the items **shrink equally**.
+
+Example:
+- Given widths: 200px, 400px, 400px → Total: 1000px
+- If the container only has 800px width, all items shrink **proportionally**:
+  - 200px → 100px  
+  - 400px → 350px (and so on...)
+
+---
+
+### Preventing Flex Items from Shrinking
+
+If you **don’t want a flex item to shrink**, use:
+
+```css
+flex-shrink: 0;
+```
+
+This will make the item keep its original width, and the other items will shrink instead.
+
+---
+
+### Using `flex-grow` for Extra Space
+
+If you want flex items to **use extra space**, use `flex-grow`.
+
+Example:
+
+- Container width: 1200px  
+- Three items with widths: 200px + 400px + 400px = 1000px  
+- 200px is left unused.
+
+You can distribute that 200px extra like this:
+
+```css
+/* Grow ratio: 75px, 50px, 75px out of total 200px */
+.flex-item-1 { flex-grow: 0.375; }
+.flex-item-2 { flex-grow: 0.25; }
+.flex-item-3 { flex-grow: 0.375; }
+```
+
+This will give more space to item 1 and 3, and less to item 2.
+
+---
+
+Let me know if you’d like a diagram or code snippet to go with this!
+<above content in easy words end/>
+
+
+
