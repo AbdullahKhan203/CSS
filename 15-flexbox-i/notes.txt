@@ -1,0 +1,19 @@
+
+
+ width:max-content; make whole content in whole line,while width:min-content; keep each word in single line and div with become the width of longest word.
+ example of max conent:-
+ i 
+ am 
+ PAkistani.
+ here width of div is is that be able to cover longest word like 'Pakistani'.
+
+
+flex div makes his childs  blocks,if we watch in computed tab, and keep in one line,but this a not blocks that cover whole line,actually these are flex-item in flex-container.
+we can't apply hiight and width on inline-element,but when we make inline-element a flex-item,then we will be able to make it height and width.We can give whole properties to flex items,which we give to block elements. 
+note:- some tags have by default margin and paddings,but if we want full contro then we should use:-
+*{
+    margin:0;
+    paddings:0;
+    box-sizing:border-box;
+}
+
