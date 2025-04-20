@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    border: 1px solid red;
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+}
+
+header{
+    height: 50px;
+    width: 100%;
+    border: 1px solid green;
+}
+main{
+    /* height: 100px; */
+    width: 100%;
+    flex: 1 0 auto;
+}
+footer{
+    height: 50px;
+    width: 100%;
+    border: 1px solid blue;
+}

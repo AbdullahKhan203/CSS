@@ -139,4 +139,11 @@ Let me know if you’d like a diagram or code snippet to go with this!
 <above content in easy words end/>
 
 
+align-items: stretch,  //stretch items height to parent
+align-items: flexStart,   //keep elements start
+align-items: flexEnd,   //keep elements end
+align-items: center,   //keep elements vertically center
+
+
+
 

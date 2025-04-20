@@ -3,14 +3,15 @@ body {
 }
 *{
     box-sizing: border-box;
-    /* padding: 0; */
+    padding: 0;
     /* margin: 0; */
 }
 
 .parent {
     padding: 10px;
-    border: 4px solid indianred;
+    /* border: 1px solid indianred; */
     display: flex;
+    padding: 0;
 }
 
 .parent span {
@@ -18,18 +19,21 @@ body {
     height: 200px;
     width: 200px;
     flex-grow: 0.375;
+    flex-shrink: 1.5;
 }
 
 .parent p {
     /* border: 4px solid darkkhaki; */
     width: 400px;
-    margin: 0;
-    flex-shrink: 0;
+    /* height: 200px; */
     flex-grow: 0.25;
+    flex-shrink: 1;
 }
 
 .parent a {
+    /* height: 200px; */
     width: 400px;
     /* border: 4px solid yellowgreen; */
     flex-grow: 0.375;
+    flex-shrink: 1.5;
 }
