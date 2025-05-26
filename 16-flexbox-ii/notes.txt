@@ -1,0 +1,28 @@
+normally all elements shrink with equal rate.if we give fixed with then it takes flex item given with,and
+assume that given width a base size.if we doesnot give fixed width then it assume content-size a base size. 
+we should not give fixed width to flex-item.
+if we want to give all flex-items fixed width, then can give with three items width 100%,100%,100%.form this all elements try take whole width,but not element dominate so all elements take equal space of available width of parent.
+all flex items show base width equal to width of parent, but show original width equally,means three elements show  them original width equal width,but show base size equal of parent.
+all flex-items show their min-width equal show lonest spelling found in flex-item.
+if we does not give width, then it take base size as content size,but if we give width then it takes base-size from width,but if we give flex-basic then it takes base-size from flex-basis.
+
+so we can define base-size with three ways:-
+1) if we does not define anything, then it takes content-size as base-size.
+2) if we give width, then it takes width as base-size.
+3) if we give flex-basic, then it takes flex-basic as base-size.
+if we give both width and flex-basic, then takes flex-basic as base-size.
+
+Q:- what is diff b/w flex-basic and width?
+Ans:- diff is that if we give flex-direction:- column; then flex-basic work for height instead of width.
+note:- if we want that flex-items height work in percent, we must give its parent height in pixels.we must give height to parent in any unit like vh etc, but not in percent,this is because if we give its parent height in percent,then parent div find his parent(body) height in pixels.
+if we give body height 400px and its parent height 100%, then in this case it will work,because parent get height of its parent body(400px).
+
+
+note:- every thing that work according to width in flex-direction row, in flex-direction-column that same thing work for height.but in case of width,width does not work with flex-direction:column.
+In case of flex-direction:column, flex-basic work as heigt and grow flex-item's height  in case of its content-size increase, but if we give any flex-item a specific height, then that item's height does not increase in case if its content increase,item height remian fix.
+
+
+note:- if we want to trget all direct child in paren tthne we can use this '.parent > * '.If we want to select all instead of first then we can use '.parent > * + *'.
+if we want that horizontall should not happen and any element should not shrink,then we can use flex-shrink:0; in all elements and flex-wrap:wrap; on parent.
+if we want to maingtain gap between flex-items then we can use property gap,which has 2 sub properties 1)row gap 2) column gap.
+
