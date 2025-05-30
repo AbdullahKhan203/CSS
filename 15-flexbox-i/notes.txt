@@ -1,3 +1,6 @@
+Q:-What is flex-box?
+Ans:-Flexbox is a one-dimensional layout method for arranging items in rows or columns. Items flex (expand) to fill additional space or shrink to fit into smaller spaces. This article explains all the fundamentals.
+it is one dimentional because in flex-box all element are either horizontal or vertical,we can't tell that half element are horizontal and half are vertical.But we can  tell that half element are horizontal and half are vertical  in grid,that is why grid is two dimensional. 
 
 
  width:max-content; make whole content in whole line,while width:min-content; keep each word in single line and div with become the width of longest word.

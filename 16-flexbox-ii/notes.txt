@@ -26,3 +26,117 @@ note:- if we want to trget all direct child in paren tthne we can use this '.par
 if we want that horizontall should not happen and any element should not shrink,then we can use flex-shrink:0; in all elements and flex-wrap:wrap; on parent.
 if we want to maingtain gap between flex-items then we can use property gap,which has 2 sub properties 1)row gap 2) column gap.
 
+if we give parent dsplay:flex,and its child,we give margin-top and margin-both then its child would stretch and spread from top to bottom.
+note:- normally we give any element margin:auto the that element reach horizontally centered,but if want it vertically centered,then we can do this with giving its parent property display dlex.for vertically center a div we must give its parent height in units.
+margin-block propert use for top and bottm and margin-inline for right and left.
+
+by default order in flex-box work normally,those elements keep first show first and that eleemtns keep in last show in last.By default each flex-item has order:0.
+if element have equal order value then it decide by html,which come first and which come in last.
+those items that has higher order values are shifted in last.e.g if we give first two flex-items order:1 and order:2.these items are reach in last.
+lower order value div come in first and higher order value reach in last.we can also give order values in 'minus'.
+
+align-self has default property 'auto' that work same as flex-start or start.this is used by individual flex-item to control its alignment.
+
+flex-grow property take all all available space,it is applied on flex-item.
+
+flex box has short hand property:-
+flex: <flex-grow> <flex-shrink> <flex-basis>;
+
+flex-box has also property align-items:base-line,which is same as align-items:flex-start.
+
+What is diff align-items:base-line and align-items:flex-start?
+Ans:-Great question! Both `align-items: baseline` and `align-items: flex-start` are used in **Flexbox** to align flex items along the **cross axis** (which is vertical by default if `flex-direction` is `row`). But they behave differently.
+It is applid on parent element.
+---
+
+### 🔹 `align-items: flex-start`
+
+* **Meaning**: Aligns all flex items at the **top** of the container (i.e., the **start** of the cross axis).
+* **Use Case**: You want all items to align at the top regardless of their content (text, height, etc.).
+
+#### 🔸 Example:
+
+Imagine boxes with different heights:
+
+```
+[box1]
+[box2     ]
+[box3    ]
+```
+
+They all start at the **top**.
+
+---
+
+### 🔹 `align-items: baseline`
+
+* **Meaning**: Aligns the **text baseline** of the flex items (typically the line where the text sits).
+* **Use Case**: You want all items' **text** to line up properly, even if their heights differ.
+
+#### 🔸 Example:
+
+If items contain text:
+
+```
+[Hello ]
+[Hi    ]
+[Goodbye]
+```
+
+Their **text baselines** are aligned, not necessarily their tops or bottoms.
+
+---
+
+### 🧠 Visual Comparison
+
+| Property                  | What aligns?       | Good for                   |
+| ------------------------- | ------------------ | -------------------------- |
+| `align-items: flex-start` | Top edges of items | Uniform top alignment      |
+| `align-items: baseline`   | Text baselines     | Aligning text across items |
+
+---
+
+### 🔍 When to Use What?
+
+* Use **`flex-start`** when layout consistency (e.g., top-aligned cards) is your priority.
+* Use **`baseline`** when **text alignment** is more important than box height.
+
+Let me know if you’d like a diagram to visualize it!
+
+
+
+
+Align-content center is used to center content in each line.normally it is work when multiple line are used.
+align-content: center is a Flexbox (or Grid) property that controls how multiple rows or columns of items are aligned along the cross axis when there's extra space in the container.
+
+✅ Conditions for align-content to have an effect:
+It only works when there are multiple lines of items (i.e., when items wrap: flex-wrap: wrap).
+
+The container must have extra space along the cross axis.
+It centers all the rows or columns as a group in the container's cross axis.
+
+What is meaing of cross-axes?
+ans:- read file info.txt.
+
+
+
+Q:- diff b/w align-content vs align-items?
+🧠 align-content vs align-items
+Property	Aligns...	Applies to...
+align-items	Each item	Single line of items
+align-content	The entire group of lines	Multiple lines (rows/columns)
+
+
+align-content is same as justify-content, but it is for multiple lines, it works when flex-wrap:wrap; is applied on parent.
+
+note:- if flex-wrap in wrap, and if we give 100% to all items then all items get 100% width.
+
+
+display:flex make element block level and height and width start working,block level means div cover whole width,and height and width work on width.
+
+
+ display:inline-flex; make element inline block,div will not cover whole width,means div cover width,which div's inner content have.all thinigs work same as display:flex, but difference is that parent become inline-block instead of block.
+
+
+
+

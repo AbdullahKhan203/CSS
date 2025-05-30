@@ -1,0 +1,52 @@
+Q:-What is meaing of cross-axes?
+Ans:-Great question! Let's break it down clearly:
+
+---
+
+### ✅ What is the **cross axis**?
+
+In **Flexbox**, there are two main axes:
+
+| Axis           | Direction Depends On  | Description                                    |
+| -------------- | --------------------- | ---------------------------------------------- |
+| **Main axis**  | `flex-direction`      | The **primary** direction in which items flow. |
+| **Cross axis** | Perpendicular to main | The **opposite** (perpendicular) direction.    |
+
+---
+
+### 🔄 Examples:
+
+#### Example 1: `flex-direction: row` (default)
+
+* **Main axis** = horizontal (left to right)
+* **Cross axis** = vertical (top to bottom)
+
+#### Example 2: `flex-direction: column`
+
+* **Main axis** = vertical (top to bottom)
+* **Cross axis** = horizontal (left to right)
+
+---
+
+### 🧠 So in the line:
+
+> "It centers all the rows or columns as a group in the container's cross axis."
+
+It means:
+
+* If your `flex-direction` is **row** → items wrap into **multiple rows** → `align-content: center` vertically **centers those rows**.
+* If your `flex-direction` is **column** → items wrap into **multiple columns** → `align-content: center` horizontally **centers those columns**.
+
+---
+
+### 📌 Quick Visual (for `flex-direction: row`):
+
+```
+|------------------------| ← flex container
+|                        |
+|   [row 1][row 2]       | ← centered vertically (cross axis)
+|                        |
+|------------------------|
+```
+
+Let me know your layout direction if you want a visual specific to your use case!
