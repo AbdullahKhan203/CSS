@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+  
+::selection {
+  background: #00ffee;
+  color: black;
+}
+
+/* Card Styling */
+.card {
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 320px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  overflow: visible; /* Allow glow to show */
+}
+
+/* Profile Picture with Glow */
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  background: url('edited-img.png') no-repeat center/cover;
+  margin: 0 auto;
+  border-radius: 50%;
+  position: relative;
+}
+
+/* Glow effect using ::before */
+.profile-pic::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at center, cyan 20%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Hover animation with ::after */
+.profile-pic::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px cyan;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile-pic:hover::after {
+  opacity: 1;
+}
+
+/* Name */
+.name {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Bio with ::first-letter */
+.bio {
+  font-size: 0.95rem;
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.bio::first-letter {
+  font-size: 2rem;
+  color: cyan;
+  font-weight: bold;
+}
+
+/* Skills List with ::marker */
+.skills {
+  list-style: square;
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+.skills li::marker {
+  color: cyan;
+  font-size: 1.2em;
+}
+
+/* Form */
+.contact-form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="file"] {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #2a2a2a;
+  color: white;
+}
+
+.contact-form input::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+input[type="file"]::file-selector-button {
+  background: cyan;
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}

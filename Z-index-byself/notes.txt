@@ -1,0 +1,90 @@
+z-index has default value 'auto' or '0';
+
+learn stacking context,formating context.how css render,how we optimize it.
+
+if any element has position and other element do not have,then position having element climb up on other except default position static.
+any position except static create its own stacking context.
+
+Q:-which css properties create stacking context of div?
+Ans:-Here's a clear list of CSS properties that create a **new stacking context** for a `<div>` (or any element), along with simple examples:
+
+---
+
+### **CSS Properties That Create Stacking Context**
+1. **`position: absolute/relative/fixed/sticky` + `z-index` (not `auto`)**
+   ```css
+   .box {
+     position: relative;
+     z-index: 1; /* Creates stacking context */
+   }
+   ```
+
+2. **`opacity` less than 1**
+   ```css
+   .box {
+     opacity: 0.99; /* Creates stacking context */
+   }
+   ```
+
+3. **`transform` (any value except `none`)**
+   ```css
+   .box {
+     transform: translate(0); /* Creates stacking context */
+   }
+   ```
+
+4. **`filter` (any value except `none`)**
+   ```css
+   .box {
+     filter: blur(0); /* Creates stacking context */
+   }
+   ```
+
+5. **`isolation: isolate`**
+   ```css
+   .box {
+     isolation: isolate; /* Explicitly creates stacking context */
+   }
+   ```
+
+6. **`will-change` (with certain values)**
+   ```css
+   .box {
+     will-change: transform; /* May create stacking context */
+   }
+   ```
+
+7. **`contain: paint/layout/strict/content`**
+   ```css
+   .box {
+     contain: paint; /* Creates stacking context */
+   }
+   ```
+
+8. **`perspective` (any value except `none`)**
+   ```css
+   .box {
+     perspective: 100px; /* Creates stacking context */
+   }
+   ```
+
+9. **`mix-blend-mode` (any value except `normal`)**
+   ```css
+   .box {
+     mix-blend-mode: multiply; /* Creates stacking context */
+   }
+   ```
+
+10. **`-webkit-overflow-scrolling: touch` (iOS only)**
+    ```css
+    .box {
+      -webkit-overflow-scrolling: touch; /* Creates stacking context */
+    }
+    ```
+
+---
+
+### **Key Notes**
+- **`position: fixed`/`sticky`** always create a stacking context (even without `z-index`).
+- **`z-index: auto`** does **not** create a stacking context (must be an integer
+

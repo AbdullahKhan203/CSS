@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Variables Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="theme-controls">
+    <h2>Theme Controls</h2>
+    <label>
+      Primary Color:
+      <input type="color" value="#3498db" id="primaryColor">
+    </label>
+    <label>
+      Text Size (px):
+      <input type="range" min="12" max="24" value="16" id="textSize">
+    </label>
+    <button id="resetBtn">Reset Theme</button>
+  </div>
+
+  <header class="site-header">
+    <h1>CSS Variables Demo</h1>
+    <p>Change the theme controls to see variables in action!</p>
+  </header>
+
+  <main class="content-area">
+    <section class="card">
+      <h2>Card Title</h2>
+      <p>This card demonstrates variable inheritance.</p>
+      <button class="btn">Normal Button</button>
+      <button class="btn special-btn">Special Button</button>
+    </section>
+
+    <div class="size-demo">
+      <p>Container width calculation: <code>calc(var(--container-width, 100%) - 20px)</code></p>
+      <div class="resizable-box"></div>
+    </div>
+
+    <div class="invalid-demo">
+      <p>Invalid property demonstration (using pixel value for color):</p>
+      <div class="broken-box">This should look wrong</div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

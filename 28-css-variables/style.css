@@ -1,0 +1,55 @@
+/* Root variables (global scope) */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --text-size: 16px;
+  --container-width: 100%;
+  --spacing-unit: 16px;
+}
+
+/* Header overrides root variable */
+.site-header {
+  --primary-color: #2c3e50; /* Override */
+  background: var(--primary-color);
+  color: white;
+  padding: var(--spacing-unit);
+  font-size: var(--text-size);
+}
+
+/* Button with fallbacks */
+.btn {
+  --btn-radius: 4px; /* Local variable */
+  color: var(--primary-color);
+  background: white;
+  border: var(--btn-border, 1px solid currentColor);
+  border-radius: var(--btn-radius);
+  padding: var(--btn-padding, 8px 16px);
+  font-size: calc(var(--text-size) * 0.9);
+  margin: calc(var(--spacing-unit) / 2);
+  cursor: pointer;
+}
+
+/* Special button overrides fallback */
+.special-btn {
+  --btn-radius: 10px; /* Override local variable */
+  --btn-padding: 12px 24px;
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Size calculation demo */
+.resizable-box {
+  width: calc(var(--container-width, 100%) - 20px);
+  height: 100px;
+  background: var(--secondary-color);
+  margin: var(--spacing-unit) 0;
+  transition: width 0.3s;
+}
+
+/* Invalid property demo */
+.broken-box {
+  color: var(--box-roundness, 8px); /* Invalid: using length for color */
+  background: lightgray;
+  padding: var(--spacing-unit);
+  border-radius: var(--box-roundness, 8px); /* Valid use of same variable */
+}

@@ -1,0 +1,80 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #363636;
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.container .circle{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+}
+.container .circle::before{
+    content: "";
+    position: absolute;
+    inset: 5px;
+    border-radius: 50%;
+    background-color: #222;
+    opacity: 0.8;
+}
+.container .circle::after{
+    content: "";
+    position: absolute;
+   height: 120px;
+   width: 120px;
+   background: #333;
+   border: 15px solid #4d4c51;
+   border-radius: 50%;
+   box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.25),
+   0 10px 10px rgba(0, 0, 0, 0.75),
+   0 -2px 2px rgba(255, 255, 255, 0.5),
+   inset 0 4px 2px rgba(0, 0, 0, 0.25),
+   inset -2px 2px rgba(255, 255, 255, 0.5)
+}
+
+.container .circle .number{
+    position: relative;
+    color: #fff;
+    z-index: 10;
+    line-height: 1em;
+    font-size: 2em;
+}
+
+
+.container .circle h4{
+  position: relative;
+    color: #fff;
+    z-index: 10; 
+    font-weight: 500;
+    font-size: 0.8;
+ text-transform: uppercase;
+ line-height: 0.6em;
+
+}
+
+.container .circle h4 span{
+font-size: 0.5em;
+font-weight: 500;
+}
