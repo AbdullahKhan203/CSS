@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
                 return;
             }
             progress.style.background = `conic-gradient(${color} ${degree}%, #222 0%)`;
+            // progress.style.background = `conic-gradient(${color} ${degree}%, blue 0%)`;
             number.innerHTML = degree + `<span>%</span>`;
             number.style.color=color;
         }, 20); // Added interval timing (20ms)

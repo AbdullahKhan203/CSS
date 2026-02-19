@@ -1,0 +1,21 @@
+background-size has three values auto,contain,cover:-
+1)auto means image should keep as it is,matlab iamge ka jo size hay wohi rahay.
+2)Cover is used to cover the whole container.
+2)contain is used in articles.
+we can also give size in background size like:-
+background-size:500px; by this width of image become 500px;height cahay jo bhi ho,width 500px hogai hay.
+if we give  background-size:500px 500px; then it takes both, 500px width and 500px size.if we give only width then height work automatic,but if we want mmanually that height and width work manually,so we can give both.
+
+Anoter is property is background-repeat,that has values no-repeat,reapt-x and repat-y,repeat,round,space.round or space is mostly used in articles.
+background-repeat:no-repeat,
+
+we can also apply multiple images,by this,
+background-image: url(one.ing),url(two.jpg),url(three.jpg);
+we use multiple images, then we can give differentheight and with for different images different like:-
+background-size:500px 500px,500px 600px,700px 800px;
+by if we give only one lke this:-
+background-size:500px 500px;
+then this applied to appl three images.
+we can alos giv property  background-position that work according to screen width like:-
+background-size:0px 0px,500px 0px,1000px 0px;
+ background-position: 0px 0px, 5000px 0px,1000px 0px; by this first image start from x-0 ad y-0,seond image start from x-500,and y-0,when first image that has width 500px completed,and for third we give '1000px 0',means tird start from x-1000,when we images that has width 500px,500px places,then third sart form 1000px and y-0 means from top.

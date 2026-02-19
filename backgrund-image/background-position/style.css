@@ -1,0 +1,33 @@
+body{
+    /* background-image: url('/assets/one.jpg'),url('/assets/two.jpg'),url('/assets/three.jpg'),url('/assets/one.jpg');
+    background-repeat: no-repeat;
+    background-size: 25% 100%;
+    background-position: 0% 0%,33.33% 0,66.66% 0%,100% 0%; */
+
+    /* background-size: 50% 100%;
+    background-position: 0% 0%,100% 0; */
+    
+
+     background-image: url('/assets/ballon-bg-removed.png'),url('/assets/one.jpg');
+    background-repeat: no-repeat;
+    background-size: 300px,cover;
+    background-position: 700px 300px,0% 0%;
+
+}
+
+
+.box{
+    width: 800px;
+    height: 380px;
+    margin: 150px auto;
+    color: #000;
+    border-radius: 20px;
+    border: 5px dashed #000;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.box h1,p{
+    margin: 20px 40px;
+    float: left;
+    text-shadow: 2px 2px 2px #000;
+}

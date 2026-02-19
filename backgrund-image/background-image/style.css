@@ -1,0 +1,6 @@
+body{
+ background-image: url("./assets/one.jpg"),url("./assets/two.jpg"),url("./assets/three.jpg");
+ background-repeat: no-repeat,no-repeat,no-repeat;
+ background-size: 450px 600px;
+ background-position: 0px 0px, 450px 0px,900px 0px;
+}

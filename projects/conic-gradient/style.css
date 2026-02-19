@@ -1,0 +1,41 @@
+.box{
+    border : 2px solid red;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    float: left;
+    margin: 20px;
+}
+
+
+.b1{
+    background-image: conic-gradient(red 1%,green);
+}
+.b2{
+    background-image: conic-gradient(from 75deg,red 10%,green 10%,blue 20%);
+}
+.b3{
+    background-image: conic-gradient(red 10%,yellow,green,red);
+}
+.b4{
+    background-image: repeating-conic-gradient(at 50% 50%,red 0%,red 0.5%,white 0.5%,white 1%);
+}
+.b5{
+     background-image: repeating-conic-gradient(at 50% 50%,rgba(0,0,0,0) 0deg,rgba(0,0,0,0) 1deg, rgba(0,0,0,0.5) 1deg,rgba(0,0,0,0.5) 2deg);
+    background-color: yellow;
+}
+.b6{
+    background-image: conic-gradient(green 20%, blue 0%);
+   
+}
+.b7{
+    background-image: repeating-conic-gradient(yellow 0deg ,yellow 90deg,black 90deg,white 180deg);
+    background-size: 30px 30px;
+}
+.b8{
+    background-image: repeating-conic-gradient(from -45deg,red 0deg ,red 90deg,blue 90deg,blue 180deg,green 180deg,green 270deg,yellow 270deg,yellow 360deg);
+    
+}
+
+
+/* for more detail visit video :- https://youtu.be/Pu1KKbNYgCY?si=gGmrDH6JjnYidUJr */

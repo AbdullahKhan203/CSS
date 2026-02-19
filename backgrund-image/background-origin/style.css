@@ -1,0 +1,79 @@
+body{
+    background-image: url('/assets/one.jpg');
+    background-size: cover;
+}
+
+
+/* .box{
+    width: 800px;
+    height: 380px;
+    margin: 150px auto;
+    color: #000;
+    border-radius: 20px;
+    border: 40px solid yellow;
+    background-color: rgba(0, 0, 0, 0.25);
+    background-image: url('/assets/three.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio:1008 / 1223;
+} */
+
+
+/* convert parent div aspect image ratio according to image */
+/* .box {
+
+    width: 800px; */
+    /* aspect-ratio: 1008 / 1223; Matches the image's aspect ratio */
+    /* margin: 150px auto;
+    color: #000;
+    border-radius: 20px;
+    border: 40px solid yellow;
+    background-color: rgba(0, 0, 0, 0.25);
+    background-image: url('/assets/three.jpg'); */
+    /* background-size: cover;       ✅ Fills the box  */
+    /* background-repeat: no-repeat; */
+    /* background-position: center;  Optional: centers image nicely */
+/* } */
+
+/* forcefully convert image aspect ratio according to div */
+/* background-size: 100% 100% stretches the image to fill the entire box — ignoring aspect ratio. */
+/* You must remove aspect-ratio when doing this. */
+ .box {
+    width: 500px;
+    height: 300px; 
+    /* aspect-ratio: 1008 / 1223;    Matches the image's aspect ratio */
+    margin: 150px auto;
+    color: #000;
+    border-radius: 20px;
+    border: 40px solid yellow;
+    background-color: rgba(0, 0, 0, 0.25);
+    background-image: url('/assets/three.jpg');
+    background-size: 100% 100%;       
+    background-repeat: no-repeat;
+    background-position: center;  
+}
+
+
+/* now image and div has same aspect ratio,bacause image and parent div has same aspect ratio */
+/* .box {
+    width: 500px;
+    height: 300px; */
+    /* aspect-ratio: 1008 / 1223; Matches the image's aspect ratio */
+    /* margin: 150px auto;
+    color: #000;
+    border-radius: 20px;
+    border: 40px solid yellow;
+    background-color: rgba(0, 0, 0, 0.25);
+    background-image: url('/assets/three-edited-from-canva.png'); */
+    /* background-size: 100% 100%;        */
+    /* background-repeat: no-repeat;
+    background-position: center;  
+} */
+
+.box h1,p{
+    margin: 20px 40px;
+    float: left;
+    text-shadow: 2px 2px 2px #000;
+    
+}
+

@@ -1,0 +1,7 @@
+.box{
+    height: 400px;
+    width: 400px;
+    border: 1px solid red;
+    /* background-image:linear-gradient(to right,rgba(228, 96, 8, 0.5),rgba(100,100,100,0.5)) ; */
+    background-image:repeating-linear-gradient(45deg,red,green 10%) ;
+}

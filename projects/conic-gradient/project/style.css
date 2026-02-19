@@ -1,0 +1,22 @@
+body{
+    background-image: url('https://www.shutterstock.com/shutterstock/photos/2198009967/display_1500/stock-photo-autumn-forest-path-orange-color-tree-red-brown-maple-leaves-in-fall-city-park-nature-scene-in-2198009967.jpg') ;
+}
+.box{
+    height: 400px;
+    width: 400px;
+    /* background-color: yellow; */
+    margin: 0 auto;
+}
+
+.box h1{
+    height: 400px;
+    width: 400px;
+    background-image:conic-gradient(from -30deg at 34% 61% ,red 0deg,red 90deg,green 90deg,green 180deg,blue 180deg,blue 270deg,yellow 270deg,yellow 360deg);
+    border: 2px solid black;
+    font-size: 30em;
+    margin-top: 20px;
+    padding-bottom: 50px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}

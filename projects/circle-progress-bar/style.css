@@ -62,19 +62,20 @@ body{
     font-size: 2em;
 }
 
+.container .circle h4 span{
+font-size: 0.5em;
+font-weight: 500;
+}
+
+
 
 .container .circle h4{
   position: relative;
     color: #fff;
     z-index: 10; 
     font-weight: 500;
-    font-size: 0.8;
+    font-size: 1em;
  text-transform: uppercase;
  line-height: 0.6em;
-
 }
 
-.container .circle h4 span{
-font-size: 0.5em;
-font-weight: 500;
-}
