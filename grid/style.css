@@ -1,0 +1,255 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    background-color: rgb(165, 166, 130);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    padding: 2rem; */
+     /* grid-template-columns: repeat(3,1fr); */
+         /* grid-template-columns: 883px 677px;  */
+   /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+   /* grid-template-rows: repeat(1fr);
+} */
+/* 
+.item{
+    background-color: aqua;
+    border: 1px solid green;
+} */
+
+
+
+
+ 
+/* .sidebar{
+     grid-column-start: 2;
+    grid-column-end: 4;
+
+    grid-row-start:2 ;
+    grid-row-end: 5;
+} */
+
+/* .sidebar{
+      grid-row-start:2 ;
+    grid-row-end: 4;
+}
+
+.section{
+      grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.footer{
+      grid-column-start: 1;
+    grid-column-end: 4;
+} */
+
+
+
+/* @media (min-width:768px){
+    .header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.sidebar{
+      grid-row-start:2 ;
+    grid-row-end: 4;
+}
+
+.section{
+      grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.footer{
+      grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+} */
+
+
+
+ .dashboard-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+.left-section{
+    display: grid;
+    gap: 24px;
+}
+
+.stats-grid{
+    display: grid;
+
+    /* ALWAYS KEEP 3 CARDS IN ONE ROW */
+    grid-template-columns: repeat(3, minmax(0,1fr));
+
+    gap: 24px;
+}
+
+.right-section{
+    display: grid;
+    gap: 24px;
+}
+
+.card{
+    background: white;
+    border-radius: 20px;
+    padding: 24px;
+    border: 1px solid #e5e7eb;
+}
+
+.activity-card,
+.sleep-card,
+.wellness-card{
+    min-height: 220px;
+}
+
+.chart-card{
+    min-height: 420px;
+}
+
+.vaccination-card{
+    min-height: 320px;
+}
+
+.chat-card{
+    min-height: 280px;
+}
+
+
+
+/* =========================================================
+   BELOW 1200px
+========================================================= */
+
+@media(max-width:1200px){
+
+    .dashboard-grid{
+        grid-template-columns: 1fr;
+    }
+
+    /* KEEP 3 CARDS IN SAME ROW */
+    .stats-grid{
+        grid-template-columns: repeat(3, minmax(0,1fr));
+    }
+}
+
+
+
+/* =========================================================
+   BELOW 768px
+========================================================= */
+
+@media(max-width:768px){
+
+    /* DIRECTLY CHANGE TO ROWS */
+    .stats-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.dashboard-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+
+    .left-section{
+        display: grid;
+        gap: 24px;
+
+        .stats-grid{
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0,1fr));
+            gap: 24px;
+        }
+    }
+
+    .right-section{
+        display: grid;
+        gap: 24px;
+    }
+
+    .card{
+        background: white;
+        border-radius: 20px;
+        padding: 24px;
+        border: 1px solid #e5e7eb;
+    }
+
+    .activity-card,
+    .sleep-card,
+    .wellness-card{
+        min-height: 220px;
+    }
+
+    .chart-card{
+        min-height: 420px;
+    }
+
+    .vaccination-card{
+        min-height: 320px;
+    }
+
+    .chat-card{
+        min-height: 280px;
+    }
+
+    @media(max-width:1200px){
+
+        grid-template-columns: 1fr;
+
+        .left-section{
+
+            .stats-grid{
+                grid-template-columns: repeat(3, minmax(0,1fr));
+            }
+        }
+    }
+
+    @media(max-width:768px){
+
+        .left-section{
+
+            .stats-grid{
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+
+*/
